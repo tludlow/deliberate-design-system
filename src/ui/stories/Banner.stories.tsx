@@ -1,6 +1,5 @@
-import type { StoryObj, Meta } from '@storybook/react'
-import { Banner } from '../Banner'
-import type { BannerProps } from '../Banner'
+import { type StoryObj, type Meta } from '@storybook/react'
+import { Banner, type BannerProps } from '../Banner'
 import { IconRocket } from '@tabler/icons'
 
 export default {

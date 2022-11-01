@@ -1,5 +1,4 @@
-import { cva } from 'class-variance-authority'
-import type { VariantProps } from 'class-variance-authority'
+import { cva, type VariantProps } from 'class-variance-authority'
 import { IconInfoSquare } from '@tabler/icons'
 
 const bannerStyles = cva('inline-flex px-4 py-3 rounded items-center border font-medium', {
