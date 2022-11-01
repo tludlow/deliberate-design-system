@@ -5,7 +5,11 @@ import { IconX } from '@tabler/icons'
 import { Fragment, useState } from 'react'
 
 const modalStyles = cva(
-  'bg-white z-30 fixed bottom-0 md:top-[50%] md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%] p-4 rounded max-h-[60%] h-full md:h-fit',
+  [
+    'h-full md:h-fit',
+    'z-30 fixed bottom-0 md:top-[50%] md:left-[50%] md:-translate-x-[50%] md:-translate-y-[50%]',
+    'bg-white p-4 rounded max-h-[60%] border border-gray-100',
+  ],
   {
     variants: {
       fullWidth: {
