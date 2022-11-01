@@ -8,6 +8,12 @@ const bannerStyles = cva('inline-flex px-4 py-3 rounded items-center border font
       success: 'bg-green-500 text-white border-green-600',
       error: 'bg-red-500 text-white border-red-600',
     },
+    fullWidth: {
+      true: 'w-full',
+    },
+    align: {
+      center: 'justify-center',
+    },
   },
   defaultVariants: {
     variant: 'success',
@@ -22,9 +28,15 @@ export interface BannerProps extends VariantProps<typeof bannerStyles> {
   children: React.ReactNode
 }
 
-export function Banner({ icon = <IconInfoSquare />, children, variant }: BannerProps) {
+export function Banner({
+  icon = <IconInfoSquare />,
+  children,
+  variant,
+  fullWidth,
+  align,
+}: BannerProps) {
   return (
-    <div className={bannerStyles({ variant })}>
+    <div className={bannerStyles({ variant, fullWidth, align })}>
       {icon && <div className="flex items-center justify-center mr-2">{icon}</div>}
       {children}
     </div>

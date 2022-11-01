@@ -28,3 +28,20 @@ export const CustomIcon: StoryObj<BannerProps> = {
     icon: <IconRocket />,
   },
 }
+
+export const FullWidth: StoryObj<BannerProps> = {
+  args: {
+    variant: 'success',
+    children: 'Some positive text to have in this banner',
+    fullWidth: true,
+  },
+}
+
+export const Centered: StoryObj<BannerProps> = {
+  args: {
+    variant: 'success',
+    children: 'Some positive text to have in this banner',
+    fullWidth: true,
+    align: 'center',
+  },
+}
