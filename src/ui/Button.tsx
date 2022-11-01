@@ -2,7 +2,7 @@ import { cva, type VariantProps } from 'class-variance-authority'
 import { ButtonOrLink, type ButtonOrLinkProps } from './ButtonOrLink'
 
 const buttonStyles = cva(
-  ['inline-flex items-center justify-center  px-3 py-2 rounded hover:shadow'],
+  'inline-flex items-center justify-center  px-3 py-2 rounded hover:shadow',
   {
     variants: {
       variant: {
