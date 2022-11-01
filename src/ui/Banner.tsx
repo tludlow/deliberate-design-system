@@ -2,11 +2,11 @@ import { cva } from 'class-variance-authority'
 import type { VariantProps } from 'class-variance-authority'
 import { IconInfoSquare } from '@tabler/icons'
 
-const bannerStyles = cva('inline-flex px-4 py-3 rounded items-center', {
+const bannerStyles = cva('inline-flex px-4 py-3 rounded items-center border font-medium', {
   variants: {
     variant: {
-      success: 'bg-green-500 text-white',
-      error: 'bg-red-500 text-white',
+      success: 'bg-green-500 text-white border-green-600',
+      error: 'bg-red-500 text-white border-red-600',
     },
   },
   defaultVariants: {

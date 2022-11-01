@@ -1,20 +1,30 @@
-import { type Meta, type StoryObj } from '@storybook/react';
-import { Banner, type BannerProps } from '../Banner';
+import type { StoryObj, Meta } from '@storybook/react'
+import { Banner } from '../Banner'
+import type { BannerProps } from '../Banner'
+import { IconRocket } from '@tabler/icons'
 
 export default {
-    component: Banner,
-} as Meta;
+  component: Banner,
+} as Meta
 
 export const Success: StoryObj<BannerProps> = {
-    args: {
-        variant: 'success',
-        children: 'Some positive text to have in this banner',
-    },
-};
+  args: {
+    variant: 'success',
+    children: 'Some positive text to have in this banner',
+  },
+}
 
 export const Error: StoryObj<BannerProps> = {
-    args: {
-        variant: 'error',
-        children: 'Some error text to have in this banner',
-    },
-};
+  args: {
+    variant: 'error',
+    children: 'Some error text to have in this banner',
+  },
+}
+
+export const CustomIcon: StoryObj<BannerProps> = {
+  args: {
+    variant: 'success',
+    children: 'You can provide a react component which is used as the icon',
+    icon: <IconRocket />,
+  },
+}
