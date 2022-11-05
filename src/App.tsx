@@ -1,23 +1,32 @@
-import { useState } from 'react'
-import { Transition } from '@headlessui/react'
-import { Modal } from './ui/Modal'
+import { Toaster } from 'react-hot-toast'
+import { Button } from './ui/Button'
+import { toast } from './ui/utils/toast'
 
 export default function App() {
-  // const [isShowing, setIsShowing] = useState(false)
-  // return (
-  //   <>
-  //     <button onClick={() => setIsShowing((isShowing) => !isShowing)}>Toggle</button>
-  //     <Transition
-  //       show={isShowing}
-  //       enter="transition-opacity duration-75"
-  //       enterFrom="opacity-0"
-  //       enterTo="opacity-100"
-  //       leave="transition-opacity duration-150"
-  //       leaveFrom="opacity-100"
-  //       leaveTo="opacity-0"
-  //     >
-  //       I will fade in and out
-  //     </Transition>
-  //   </>
-  return <Modal>hello</Modal>
+  const sleep = (ms: number) => {
+    return new Promise((resolve) => setTimeout(resolve, ms))
+  }
+
+  return (
+    <div>
+      <Toaster
+        position="bottom-right"
+        reverseOrder={false}
+        toastOptions={{
+          duration: 5000,
+        }}
+      />
+      <Button
+        onClick={() =>
+          toast.promise(sleep(1000), {
+            loading: 'Waiting for the response',
+            success: 'The action was successful',
+            error: 'The action errored, oh no :(',
+          })
+        }
+      >
+        Promise Toast
+      </Button>
+    </div>
+  )
 }
