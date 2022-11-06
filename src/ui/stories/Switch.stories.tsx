@@ -6,5 +6,8 @@ export default {
 } as Meta
 
 export const Default: StoryObj<SwitchProps> = {
-  args: {},
+  args: {
+    defaultChecked: false,
+    disabled: false,
+  },
 }
