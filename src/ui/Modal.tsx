@@ -57,7 +57,7 @@ export function Modal({ children, fullWidth }: ModalProps) {
           >
             <Dialog.Content forceMount className={modalStyles({ fullWidth })}>
               <Dialog.Close className="absolute right-2 top-2 rounded-full p-1 hover:bg-gray-200">
-                <IconX className="text-gray-600 hover:text-gray-800 h-5 w-5" />
+                <IconX className="h-5 w-5 text-gray-600 hover:text-gray-800" />
               </Dialog.Close>
               {children}
             </Dialog.Content>

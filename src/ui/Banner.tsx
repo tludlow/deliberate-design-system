@@ -36,7 +36,7 @@ export function Banner({
 }: BannerProps) {
   return (
     <div className={bannerStyles({ variant, fullWidth, align })}>
-      {icon && <div className="flex items-center justify-center mr-2">{icon}</div>}
+      {icon && <div className="mr-2 flex items-center justify-center">{icon}</div>}
       {children}
     </div>
   )

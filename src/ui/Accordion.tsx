@@ -30,7 +30,7 @@ export function Accordion({ items, type }: AccordionProps) {
           <AccordionPrimitive.Item value={item.header} key={item.id}>
             <AccordionPrimitive.Header>
               <AccordionPrimitive.Trigger asChild>
-                <div className="flex justify-between align-bottom p-2 rounded border border-gray-400 group">
+                <div className="group flex justify-between rounded border border-gray-400 p-2 align-bottom">
                   {item.header}
                   <IconChevronDown className="h-5 w-5 text-gray-600 group-radix-state-open:rotate-180 group-radix-state-open:duration-200" />
                 </div>
