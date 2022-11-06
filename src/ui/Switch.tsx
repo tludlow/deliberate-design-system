@@ -19,7 +19,7 @@ export function Switch({ defaultChecked, disabled }: SwitchProps) {
       className={clsx(
         'group',
         'radix-state-checked:bg-green-500',
-        'radix-state-unchecked:bg-gray-200 dark:radix-state-unchecked:bg-gray-800',
+        'radix-state-unchecked:bg-gray-200',
         'relative inline-flex h-[24px] w-[44px] flex-shrink-0  rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out',
         'focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75',
         {
